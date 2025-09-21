@@ -100,7 +100,15 @@ return [
     |
     */
     'allServicesAvailable' => [
-
+        'user',
+        'dashboard',
+        'setting',
+        'login',
+        'register',
+        'forgot-password',
+        'reset-password',
+        'confirm-password',
+        'logout',
     ],
     'publicServices' => [
 

@@ -5,17 +5,18 @@ if(!function_exists('localeUrl')){
      * Generate a URL with locale.
      *
      * @param  string  $path
-     * @param  ?string  $locale
+     * @param  bool  $absolute
      * @return string
      */
-    function localeUrl(string $path, ?string $locale = null): string
+    function localeUrl(string $path,string $locale = null, bool $absolute = true): string
     {
-        $locale = $locale ?? app()->getLocale();
-        return '/' . trim($locale . '/' . ltrim($path, '/'), '/');
+        if(!isset($locale)){$locale = app()->getLocale();}
+        $url = "/{$locale}/".ltrim($path, '/');
+        return $absolute ? url($url) : $url;
     }
 }
 
-if(!function_exists('localeRoute')){
+if(!function_exists('route')){
     /**
      * Generate a URL to a named route with automatic locale parameter.
      *
@@ -24,7 +25,7 @@ if(!function_exists('localeRoute')){
      * @param  bool  $absolute
      * @return string
      */
-    function localeRoute($name, $parameters = [], $absolute = true): string
+    function localRoute($name, $parameters = [], $absolute = true): string
     {
         // If parameters is not an array, make it one
         if (!is_array($parameters)) {
