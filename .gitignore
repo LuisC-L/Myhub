@@ -22,10 +22,15 @@
 
 # IDE files
 /.idea
+.idea
 /.vscode
+.vscode
 /.fleet
+.fleet
 /.nova
+.nova
 /.zed
+.zed
 .phpactor.json
 
 # Logs

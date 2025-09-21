@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Myhub'),
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +82,32 @@ return [
 
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
 
+    'availableLocales' => [
+        'en' => 'English',
+        'fr' => 'French',
+        'es' => 'Spanish',
+    ],
+
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Services Configuration
+    |--------------------------------------------------------------------------
+    |
+    | The application services present the available services that can be used
+    | Services may be different with permission? to verify if I want
+    |
+    */
+    'allServicesAvailable' => [
+
+    ],
+    'publicServices' => [
+
+    ],
+    'privateServices' => [
+
+    ],
 
     /*
     |--------------------------------------------------------------------------
